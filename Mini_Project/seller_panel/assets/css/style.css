@@ -1,0 +1,260 @@
+/* General Body Styling */
+body {
+  background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Container Styling */
+.container {
+  padding: 40px 0;
+}
+
+/* Table Styling */
+.table {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+}
+
+.table th {
+  background: #343a40;
+  color: white;
+  padding: 12px;
+}
+
+.table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+  /* Image Styling */
+  .product-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .product-image:hover {
+    transform: scale(1.2);
+  }
+  /* Ensure all modals start as hidden */
+  .modal {
+      display: none !important;  /* Force Bootstrap to handle visibility */
+      opacity: 0;
+  }
+  
+  /* When modal is opened, make sure it appears */
+  .modal.show {
+      display: block !important;
+      opacity: 1;
+  }
+  
+  /* Ensure modal backdrop is visible */
+  .modal-backdrop {
+      display: block !important;
+      opacity: 0.5;
+  }
+  
+  /* Fix Bootstrap modal positioning */
+  .modal-dialog {
+      top: 10%;
+      transform: translateY(10%);
+  }
+  /* Modal Styling */
+  .modal-header {
+    background: #343a40;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-header h4 {
+    color: white;
+    margin: 0;
+    flex-grow: 1;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .modal-header .close {
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    color: #fff;
+    opacity: 0.8;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.3s;
+    margin-left: 10px;
+  }
+  
+  .modal-header .close:hover {
+    opacity: 1;
+    color: #ff4d4d;
+  }
+  
+  .modal-body {
+    padding: 20px;
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .modal-body label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .modal-body .form-control {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    transition: 0.3s;
+    width: 100%;
+  }
+  
+  .modal-body .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .modal-body .form-control-file {
+    padding: 8px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  /* Button Styling */
+  .btn-custom,
+  .btn-cancel {
+    width: 17%;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+    text-align: center;
+  }
+  
+  .btn-custom {
+    background: #28a745;
+    color: white;
+  }
+  
+  .btn-custom:hover {
+    color: white;
+    background: #218838;
+  }
+  
+  .btn-cancel {
+    background: #dc3545;
+    color: white;
+  }
+  
+  .btn-cancel:hover {
+    background: #c82333;
+  }
+  
+  .btn-delete {
+    background: #dc3545;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .btn-delete:hover {
+    background: #c82333;
+  }
+  #editModal {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 1050 !important;
+}
+.modal-backdrop {
+    display: block !important;
+    opacity: 0.5 !important;
+}
+.edit-btn {
+  background-color: #007bff; /* Change to desired color */
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+/* Fix Label Alignment */
+.modal-body label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* General Dropdown Styling */
+.modal-body select.form-control {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  appearance: none; /* Removes default browser styling */
+  cursor: pointer;
+}
+
+/* Ensure full visibility of dropdown options */
+.modal-body select.form-control option {
+  font-size: 16px;
+  padding: 10px;
+  white-space: normal; /* Allows text to wrap */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Improve dropdown focus effect */
+.modal-body select.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Fix Bootstrap modal dropdown positioning */
+.modal-body select.form-control {
+  display: block;
+  width: 100%;
+}
+
+/* Fix dropdown arrow issue */
+.modal-body select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23333' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+/* Optional: Adjust dropdown height inside the modal */
+.modal-body select.form-control {
+  height: 45px;
+}
